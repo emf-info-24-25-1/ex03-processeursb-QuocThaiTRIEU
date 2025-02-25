@@ -1,5 +1,7 @@
 package processeur.services;
 
+import java.security.PrivateKey;
+
 import processeur.ctrl.Controller;
 import processeur.models.CPU;
 
@@ -13,29 +15,26 @@ import processeur.models.CPU;
  * @version 0.1
  */
 public class ServiceCPU {
-
     /**
      * Constantes indiquant le nombre maximum de CPUs que peut contenir notre liste.
      */
-    // VOTRE CODE ICI...
-
+    public static final int NBRE_CPU = 20;
     /**
      * Attribut contenant le tableau des CPUs.
      */
-    // VOTRE CODE ICI...
-
+    private CPU[] cpus = new CPU[NBRE_CPU];
     /**
      * Attribut contenant la référence au contrôleur de l'application MVC
      * "Processeur".
      */
-    // VOTRE CODE ICI...
-
+    private Controller refCtrl;
     /**
      * Constructeur de la classe ServiceCPU. Les attributs de la classe ServiceCPU
      * sont initialisés.
      */
     public ServiceCPU() {
-        // VOTRE CODE ICI...
+        this.cpus = new CPU[NBRE_CPU];
+        this.refCtrl = refCtrl;
     }
 
     /**

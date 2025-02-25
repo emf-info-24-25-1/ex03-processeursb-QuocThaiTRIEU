@@ -18,20 +18,20 @@ public class Controller {
      /**
      * Référence à la vue MVC de notre application.
      */
-    // VOTRE CODE ICI...
-
+    private View refView() {
+    }
     /**
      * Référence au service CPU de notre application.
      */
-    // VOTRE CODE ICI...
-
+    private ServiceCPU refServiceCPU() {
+    }
     /**
      * Constructeur de la classe Controller. Les attributs de la classe Controller sont initialisés à null.
      */
-    public Controller() {
-        // VOTRE CODE ICI...
+    public Controller(View refView, ServiceCPU refServiceCPU) {
+        this.refView = refView;
+        this.refServiceCPU = refServiceCPU;
     }
-
     /**
      * Méthode permettant de démarrer le contrôleur et donc la logique du programme.
      */
@@ -78,7 +78,22 @@ public class Controller {
         // Terminer le nouveau rapport pour l'utilisateur
         getRefView().rapport_Fin();
     }
-
+        /**
+     * Setter de la référence à la vue de l'application MVC "Processeur".
+     *
+     * @param refView référence à la vue de l'application MVC "Processeur"
+     */
+    public void setRefView(View refView) {
+        // VOTRE CODE ICI...
+    }
+        /**
+     * Setter de la référence au service CPU de l'application MVC "Processeur".
+     *
+     * @param refServiceCPU référence au service CPU de l'application MVC "Processeur"
+     */
+    public void setRefServiceCPU(ServiceCPU refServiceCPU) {
+        // VOTRE CODE ICI...
+    }
     /**
      * Getter de la référence à la vue de l'application MVC "Processeur".
      *
@@ -87,16 +102,6 @@ public class Controller {
     public View getRefView() {
         // VOTRE CODE ICI...
     }
-
-    /**
-     * Setter de la référence à la vue de l'application MVC "Processeur".
-     *
-     * @param refView référence à la vue de l'application MVC "Processeur"
-     */
-    public void setRefView(View refView) {
-        // VOTRE CODE ICI...
-    }
-
     /**
      * Getter de la référence au service CPU de l'application MVC "Processeur".
      *
@@ -105,14 +110,4 @@ public class Controller {
     public ServiceCPU getRefServiceCPU() {
         // VOTRE CODE ICI...
     }
-
-    /**
-     * Setter de la référence au service CPU de l'application MVC "Processeur".
-     *
-     * @param refServiceCPU référence au service CPU de l'application MVC "Processeur"
-     */
-    public void setRefServiceCPU(ServiceCPU refServiceCPU) {
-        // VOTRE CODE ICI...
-    }
-
 }
