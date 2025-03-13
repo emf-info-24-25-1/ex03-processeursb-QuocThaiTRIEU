@@ -93,20 +93,20 @@ public class ServiceCPU {
     }
 
     /**
-     * Getter de la référence au contrôleur de l'application MVC "Processeur".
-     *
-     * @return la référence au contrôleur de l'application MVC "Processeur"
-     */
-    public Controller getRefCtrl() {
-        // VOTRE CODE ICI...
-    }
-
-    /**
      * Setter de la référence au contrôleur de l'application MVC "Processeur".
      *
      * @param refCtrl référence au contrôleur de l'application MVC "Processeur"
      */
     public void setRefCtrl(Controller refCtrl) {
+        // VOTRE CODE ICI...
+    }
+
+    /**
+     * Getter de la référence au contrôleur de l'application MVC "Processeur".
+     *
+     * @return la référence au contrôleur de l'application MVC "Processeur"
+     */
+    public Controller getRefCtrl() {
         // VOTRE CODE ICI...
     }
 

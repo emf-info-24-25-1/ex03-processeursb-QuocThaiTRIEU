@@ -1,5 +1,7 @@
 package processeur.models;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 
 public class CPU {
     public static final double UNKNOWN_MIPS = -1;

@@ -18,19 +18,17 @@ public class Controller {
      /**
      * Référence à la vue MVC de notre application.
      */
-    private View refView() {
-    }
+    private View refView;
     /**
      * Référence au service CPU de notre application.
      */
-    private ServiceCPU refServiceCPU() {
-    }
+    private ServiceCPU refServiceCPU;
     /**
      * Constructeur de la classe Controller. Les attributs de la classe Controller sont initialisés à null.
      */
-    public Controller(View refView, ServiceCPU refServiceCPU) {
-        this.refView = refView;
-        this.refServiceCPU = refServiceCPU;
+    public Controller() {
+        this.refView = null;
+        this.refServiceCPU = null;
     }
     /**
      * Méthode permettant de démarrer le contrôleur et donc la logique du programme.
