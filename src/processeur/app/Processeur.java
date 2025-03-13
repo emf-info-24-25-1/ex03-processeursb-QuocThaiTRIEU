@@ -21,6 +21,7 @@ public class Processeur {
      */
     public static void main(String[] args ) {
         // VOTRE CODE ICI...
+        Controller ctrl = new Controller();
     }
 
 }
