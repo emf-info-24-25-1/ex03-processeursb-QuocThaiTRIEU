@@ -1,7 +1,5 @@
 package processeur.services;
 
-import java.security.PrivateKey;
-
 import processeur.ctrl.Controller;
 import processeur.models.CPU;
 
@@ -34,7 +32,7 @@ public class ServiceCPU {
      */
     public ServiceCPU() {
         this.cpus = new CPU[NBRE_CPU];
-        this.refCtrl = refCtrl;
+        this.refCtrl = null;
     }
 
     /**
@@ -47,7 +45,16 @@ public class ServiceCPU {
      * @return vrai si une place libre a été trouvée dans notre liste de cpus
      */
     public boolean ajouterUnNouveau(CPU cpu) {
-        // VOTRE CODE ICI...
+        boolean verif = false;
+        for (int x = 0; x < cpus.length; x++) {
+            if (cpus[x] != null) {
+                return verif;
+            } else {
+                cpus[x] = cpu;
+                verif = true;
+            }
+        }
+        return verif;
     }
 
     /**
@@ -56,7 +63,7 @@ public class ServiceCPU {
      * @return la liste des CPUs
      */
     public CPU[] obtenirLaListe() {
-        // VOTRE CODE ICI...
+        return cpus;
     }
 
     /**
@@ -66,7 +73,13 @@ public class ServiceCPU {
      * @return le nombre de CPUs contenus dans notre liste
      */
     public int nombreDeCPUDansLaListe() {
-        // VOTRE CODE ICI...
+        int comptage = 0;
+        for (int x = 0; x < cpus.length; x++) {
+            if (cpus[x] != null) {
+                comptage++;
+            }
+        }
+        return comptage;
     }
 
     /**
@@ -77,7 +90,7 @@ public class ServiceCPU {
      * @return la taille de la liste de CPU
      */
     public int tailleDeLaListe() {
-        // VOTRE CODE ICI...
+        return cpus.length;
     }
 
     /**
@@ -89,7 +102,11 @@ public class ServiceCPU {
      *         limites du tableau
      */
     public CPU obtenirUnElement(int indice) {
-        // VOTRE CODE ICI...
+        if (indice <= 0 && indice < NBRE_CPU) {
+            return cpus[indice];
+        } else {
+            return null;
+        }
     }
 
     /**
@@ -98,7 +115,7 @@ public class ServiceCPU {
      * @param refCtrl référence au contrôleur de l'application MVC "Processeur"
      */
     public void setRefCtrl(Controller refCtrl) {
-        // VOTRE CODE ICI...
+        this.refCtrl = refCtrl;
     }
 
     /**
@@ -107,7 +124,7 @@ public class ServiceCPU {
      * @return la référence au contrôleur de l'application MVC "Processeur"
      */
     public Controller getRefCtrl() {
-        // VOTRE CODE ICI...
+        return this.refCtrl;
     }
 
 }
