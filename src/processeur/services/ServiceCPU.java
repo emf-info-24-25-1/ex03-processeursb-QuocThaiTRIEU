@@ -20,7 +20,7 @@ public class ServiceCPU {
     /**
      * Attribut contenant le tableau des CPUs.
      */
-    private CPU[] cpus = new CPU[NBRE_CPU];
+    private CPU[] cpus;
     /**
      * Attribut contenant la référence au contrôleur de l'application MVC
      * "Processeur".
@@ -62,8 +62,12 @@ public class ServiceCPU {
      *
      * @return la liste des CPUs
      */
-    public CPU[] obtenirLaListe() {
-        return cpus;
+    public void obtenirLaListe(CPU[] cpus) {
+        for (int i = 0; i < cpus.length; i++) {
+            if (cpus[i] != null) {
+                System.out.println(cpus[i]);
+            }
+        }
     }
 
     /**
@@ -124,7 +128,7 @@ public class ServiceCPU {
      * @return la référence au contrôleur de l'application MVC "Processeur"
      */
     public Controller getRefCtrl() {
-        return this.refCtrl;
+        return refCtrl;
     }
 
 }

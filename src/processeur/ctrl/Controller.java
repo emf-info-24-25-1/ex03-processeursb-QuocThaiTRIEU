@@ -34,7 +34,6 @@ public class Controller {
      * Méthode permettant de démarrer le contrôleur et donc la logique du programme.
      */
     public void start() {
-
         // Ajouter les CPUS connus
         getRefServiceCPU().ajouterUnNouveau(new CPU("Intel 4004", 1971, 2300, 0.06));
         getRefServiceCPU().ajouterUnNouveau(new CPU("Intel 8088", 1972, 3500, 0.06));
@@ -82,7 +81,7 @@ public class Controller {
      * @param refView référence à la vue de l'application MVC "Processeur"
      */
     public void setRefView(View refView) {
-        // VOTRE CODE ICI...
+        this.refView = refView;
     }
         /**
      * Setter de la référence au service CPU de l'application MVC "Processeur".
@@ -90,7 +89,7 @@ public class Controller {
      * @param refServiceCPU référence au service CPU de l'application MVC "Processeur"
      */
     public void setRefServiceCPU(ServiceCPU refServiceCPU) {
-        // VOTRE CODE ICI...
+        this.refServiceCPU = refServiceCPU;
     }
     /**
      * Getter de la référence à la vue de l'application MVC "Processeur".
@@ -99,7 +98,6 @@ public class Controller {
      */
     public View getRefView() {
         return refView;
-        // VOTRE CODE ICI...
     }
     /**
      * Getter de la référence au service CPU de l'application MVC "Processeur".
