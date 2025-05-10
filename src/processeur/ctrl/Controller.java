@@ -15,7 +15,7 @@ import processeur.views.View;
  */
 public class Controller {
 
-     /**
+    /**
      * Référence à la vue MVC de notre application.
      */
     private View refView;
@@ -23,13 +23,16 @@ public class Controller {
      * Référence au service CPU de notre application.
      */
     private ServiceCPU refServiceCPU;
+
     /**
-     * Constructeur de la classe Controller. Les attributs de la classe Controller sont initialisés à null.
+     * Constructeur de la classe Controller. Les attributs de la classe Controller
+     * sont initialisés à null.
      */
     public Controller() {
         this.refView = null;
         this.refServiceCPU = null;
     }
+
     /**
      * Méthode permettant de démarrer le contrôleur et donc la logique du programme.
      */
@@ -75,7 +78,8 @@ public class Controller {
         // Terminer le nouveau rapport pour l'utilisateur
         getRefView().rapport_Fin();
     }
-        /**
+
+    /**
      * Setter de la référence à la vue de l'application MVC "Processeur".
      *
      * @param refView référence à la vue de l'application MVC "Processeur"
@@ -83,14 +87,17 @@ public class Controller {
     public void setRefView(View refView) {
         this.refView = refView;
     }
-        /**
+
+    /**
      * Setter de la référence au service CPU de l'application MVC "Processeur".
      *
-     * @param refServiceCPU référence au service CPU de l'application MVC "Processeur"
+     * @param refServiceCPU référence au service CPU de l'application MVC
+     *                      "Processeur"
      */
     public void setRefServiceCPU(ServiceCPU refServiceCPU) {
         this.refServiceCPU = refServiceCPU;
     }
+
     /**
      * Getter de la référence à la vue de l'application MVC "Processeur".
      *
@@ -99,6 +106,7 @@ public class Controller {
     public View getRefView() {
         return refView;
     }
+
     /**
      * Getter de la référence au service CPU de l'application MVC "Processeur".
      *

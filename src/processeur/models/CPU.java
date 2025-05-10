@@ -4,8 +4,8 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 
 public class CPU {
-    public static final double UNKNOWN_MIPS = -1;
-    private final String nom;
+    public static final double UNKNOWN_MIPS = -1.0;
+    private String nom;
     private int annee;
     private long transistors;
     private double mips;
@@ -22,6 +22,7 @@ public class CPU {
         this.transistors = transistors;
     }
 
+    @Override
     public String toString() {
         String retour = "";
         DecimalFormat formatage = new DecimalFormat("#,###");
@@ -34,9 +35,11 @@ public class CPU {
         formatage.setDecimalFormatSymbols(symbols);
         formatageMips.setDecimalFormatSymbols(point);
         if (getMips() == UNKNOWN_MIPS) {
-            retour = "En " + annee + " le CPU " + nom + " avec " + formatage.format(transistors) + " transitors et une puissance de calcul incronnue.";
+            retour = "En " + annee + " le CPU " + nom + " avec " + formatage.format(transistors)
+                    + " transitors et une puissance de calcul incronnue.";
         } else {
-            retour = "En " + annee + " le CPU " + nom + " avec " + formatage.format(transistors) + " transitors et une puissance de calcul de " + formatageMips.format(mips) + " mips.";
+            retour = "En " + annee + " le CPU " + nom + " avec " + formatage.format(transistors)
+                    + " transitors et une puissance de calcul de " + formatageMips.format(mips) + " mips.";
         }
         return retour;
     }

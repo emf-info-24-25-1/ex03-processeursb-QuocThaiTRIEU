@@ -26,6 +26,7 @@ public class ServiceCPU {
      * "Processeur".
      */
     private Controller refCtrl;
+
     /**
      * Constructeur de la classe ServiceCPU. Les attributs de la classe ServiceCPU
      * sont initialisés.
@@ -45,16 +46,13 @@ public class ServiceCPU {
      * @return vrai si une place libre a été trouvée dans notre liste de cpus
      */
     public boolean ajouterUnNouveau(CPU cpu) {
-        boolean verif = false;
-        for (int x = 0; x < cpus.length; x++) {
-            if (cpus[x] != null) {
-                return verif;
-            } else {
-                cpus[x] = cpu;
-                verif = true;
+        for (int i = 0; i < cpus.length; i++) {
+            if (cpus[i] == null) {
+                cpus[i] = cpu;
+                return true;
             }
         }
-        return verif;
+        return false;
     }
 
     /**
@@ -62,12 +60,8 @@ public class ServiceCPU {
      *
      * @return la liste des CPUs
      */
-    public void obtenirLaListe(CPU[] cpus) {
-        for (int i = 0; i < cpus.length; i++) {
-            if (cpus[i] != null) {
-                System.out.println(cpus[i]);
-            }
-        }
+    public CPU[] obtenirLaListe() {
+        return cpus;
     }
 
     /**
